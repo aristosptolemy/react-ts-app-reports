@@ -1,0 +1,115 @@
+.main-window {
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+}
+
+.main-area {
+  margin: 10px;
+  background-color: white;
+  flex-grow: 1;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0 20px;
+  margin: 10px;
+}
+
+.DisplayTime {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.DateSelect {
+  width: 130px;
+  margin-right: 60px;
+  font-size: 16px;
+  height: 30px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.timeline {
+  position: relative;
+  width: 85%;
+  margin: 0 auto;
+  height: calc(100vh - 130px); /* タイムライン全体の高さを設定 */
+  border-left: 2px solid #ccc;
+  overflow: hidden;
+  background-color: #f9f9f9; /* 背景色でタイムラインを見やすく */
+}
+
+.time-slot {
+  flex: 1;
+  position: relative;
+  border-bottom: 1px solid #ddd; /* 各時間のボーダーライン */
+  text-align: left;
+  padding-left: 5px;
+  font-size: 14px;
+}
+
+.time-label {
+  position: absolute; /* 絶対配置で正確な位置調整 */
+  top: 7px; /* ボーダーラインからの距離を指定 */
+  left: 10px; /* 左側のパディング */
+  font-size: 14px;
+  background-color: #f9f9f9; /* 背景色を設定して視認性を向上 */
+  z-index: 2; /* ボーダーラインよりも前面に表示 */
+}
+
+.task-block {
+  position: absolute;
+  left: 60px; /* タスクの左端をタイムライン内に配置 */
+  width: calc(100% - 80px); /* タスクの幅をタイムラインに合わせる */
+  background-color: #667eea;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 12px;
+  z-index: 1; /* タスクを時間スロットの上に表示 */
+  box-sizing: border-box;
+  overflow: hidden; /* テキストがはみ出さないように設定 */
+}
+
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+  background-color: #fff;
+}
+
+.buttonUnderlineSt {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #222;
+  border-radius: 20px;
+  border: 1px solid #1B85FB;
+  background-color: #fff;
+  transition: all 0.3s;
+  padding: 10px 15px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.buttonUnderlineSt:hover {
+  color: #fff;
+  border: 1px solid #1B85FB;
+  background-color: #1B85FB;
+}
+
+.buttonUnderlineSt:active {
+  transform: scale(0.9);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+}
